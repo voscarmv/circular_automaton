@@ -29,10 +29,10 @@ int main(){
 	char fname[64];
 
 	int i = 0;
-	while(cellsarea <= circlearea){
+	while(cellsarea <= circlearea + circlearea/4){
 		hits = imgcompare(compare, circle, cells, s, s);
 		printf(
-			"cell%04d.ppm %d %d %.2f %d %.2f\n",
+			"img/cell%04d.ppm %d %d %.2f %d %.2f\n",
 			i,
 			cellsarea,
 			circlearea,
@@ -40,11 +40,11 @@ int main(){
 			hits,
 			(double) (hits * 100) / circlearea
 		);
-		sprintf(fname, "cell%04d.ppm", i ++);
+		fflush(NULL);
+		sprintf(fname, "img/cell%04d.ppm", i ++);
 		saveppm(fname, compare, s, s);
 		error = circlearea - hits;
 		cellsarea = imgcelliter(cells, buffer, s, s);
-		i ++;
 	}
 
 	imgfree(cells, s, s);
