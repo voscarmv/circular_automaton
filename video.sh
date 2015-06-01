@@ -24,13 +24,13 @@ while read FNAME CELLSAREA CIRCLEAREA CELLSTOCIRCLE HITS HITSTOCIRCLE; do
 	echo Hits $HITS
 	echo Hits to circle $HITSTOCIRCLE%
 
-	ITER=`echo $FNAME | sed 's/cell//;s/.ppm//'`
+	ITER=`echo $FNAME | sed 's/img\/cell//;s/.ppm//'`
 
 	if test $CIRCLEAREA -ge $CELLSAREA ; then
-		ANNOTATION="Iteracion: $ITER\nPixels del disco: $CIRCLEAREA\nPixels del cultivo: $CELLSAREA\nPixels del cultivo en disco: $HITS\nPorciento lleno del disco: $HITSTOCIRCLE\%\nArea del cultivo es $CELLSTOCIRCLE\% el area del disco\n\n"
+		ANNOTATION="Iteracion: $ITER\nPixels del disco: $CIRCLEAREA\nPixels del cultivo: $CELLSAREA\nHay $HITS pixels del cultivo dentro del disco\nEl disco esta $HITSTOCIRCLE\% lleno\nEl area del cultivo es $CELLSTOCIRCLE\% el area del disco\n\n"
 		FILL='#00ff00'
 	else
-		ANNOTATION="CULTIVO > DISCO\nIteracion: $ITER\nPixels del disco: $CIRCLEAREA\nPixels del cultivo: $CELLSAREA\nPixels del cultivo en disco: $HITS\nPorciento lleno del disco: $HITSTOCIRCLE\%\nArea del cultivo es $CELLSTOCIRCLE\% el area del disco\n\n"
+		ANNOTATION="CULTIVO > DISCO\nIteracion: $ITER\nPixels del disco: $CIRCLEAREA\nPixels del cultivo: $CELLSAREA\nHay $HITS pixels del cultivo dentro del disco\nEl disco esta $HITSTOCIRCLE\% lleno\nEl area del cultivo es $CELLSTOCIRCLE\% el area del disco\n\n"
 	fi
 
 	FILE=`echo $FNAME | sed 's/.ppm//'`
