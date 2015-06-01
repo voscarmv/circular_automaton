@@ -1,20 +1,18 @@
-/* Deterministic cellular automaton V2 */
-int imgcelldetermiter2(int **img, int **buffer, int *seq, int len, int iter, int x, int y);
+// circular_automaton, Copyright 2013 Vicente Oscar Mier Vela <vomv1988@gmail.com>
+// This file is part of circular_automaton.
 
-/* Display sequence */
-int printseq(int *seq, int len);
+// circular_automaton is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
 
-/* Initialize sequence seq randomly */
-int initseq(int *seq, int len);
+// circular_automaton is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
 
-/* Copy sequence ori to dest */
-int copyseq(int *dest, int*ori, int len);
-
-/* Iteration for deterministic cellular automaton */
-int imgcelldetermiter(int **img, int **buffer, int *seq, int len, int iter, int x, int y);
-
-/* Disturb the deterministic sequence */
-int disturbseq(int *seq, int len);
+// You should have received a copy of the GNU General Public License
+// along with circular_automaton. If not, see <http://www.gnu.org/licenses/>.
 
 /* Save comparison between circle and cells in compare */
 int imgcompare(int **compare, int **circle, int **cells, int x, int y);

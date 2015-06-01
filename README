@@ -1,0 +1,47 @@
+Probabilistic cellular automaton culture with circular culture morphology
+
+This package produces a video of the growth progression of a probabilistic cellular automaton culture.
+The automata colony grows with a circular morphology. To measure how circular the morphology
+is, a comparison is made at each iteration between a disk, drawin using Bresenham's circle algorithm,
+and the colony.
+
+This package requires:
+	build-essential
+	imagemagick
+	avconv
+
+In debian or ubuntu, install these with:
+	# apt-get install build-essential imagemagick avconv
+Or:
+	# aptitude install build-essential imagemagick avconv
+
+To compile and create a video showing the mentioned progression, do:
+	$ make
+	$ make video
+
+The resulting video will be saved in cell.mp4
+
+--
+
+Cultivo virtual con un automata circular probabilistico con una morfologia circular
+
+Este paquete produce un video de la progresion de crecimiento de un cultivo de automatas celulares
+probabilisticos. El cultivo de aumatas crece con una morfologia circular. Para medir la redondez de
+la morfologia, se compara su forma en cada iteracion con la de un disco generado por medio del
+algoritmo de Bersenham.
+
+Este paquete requiere:
+	build-essential
+	imagemagick
+	avcong
+
+En debian, o ubuntu, instalelos con:
+	# apt-get install build-essential imagemagick avconv
+O:
+	# aptitude install build-essential imagemagick avconv
+
+Para compilar y crear un video que muestre la progresion, ejecute:
+	$ make
+	$ make video
+
+El video resultante se guarda en cell.mp4
