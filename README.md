@@ -2,7 +2,7 @@
 
 This package produces a video of the growth progression of a probabilistic cellular automaton culture.
 The automata colony grows with a circular morphology. To measure how circular the morphology
-is, a comparison is made at each iteration between a disk, drawin using Bresenham's circle algorithm,
+is, a comparison is made at each iteration between a disk, drawin using [Bresenham's circle algorithm](https://en.wikipedia.org/wiki/Midpoint_circle_algorithm),
 and the colony.
 
 In this [YouTube video](https://www.youtube.com/watch?v=46WZUcRUPEI) you can watch the automata colony growing in real time:
